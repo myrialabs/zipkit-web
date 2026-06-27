@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZipKit | Overkill compression for Node, Bun &amp; the browser</title>
-  <meta name="description" content="One typed API over nine compression codecs — gzip, deflate, zlib, zstd, lz4, snappy, brotli, lzma, bzip2 — plus ZIP, on a single WebAssembly engine. Native speed where it wins, libdeflate density where it matters. Node 18+, Bun, and the browser." />
+  <meta name="description" content="One typed API over ten compression codecs — gzip, deflate, zlib, zstd, lz4, snappy, brotli, lzma, bzip2, xz — plus ZIP (streaming &amp; AES), tar and 7z, on a single WebAssembly engine. Native speed where it wins, libdeflate density where it matters. Node 18+, Bun, and the browser." />
   <meta name="keywords" content="compression, gzip, deflate, zlib, zstd, brotli, lz4, snappy, lzma, bzip2, zip, wasm, webassembly, fflate alternative, Node.js, Bun, browser, TypeScript, MyriaLabs" />
   <meta name="author" content="MyriaLabs" />
   <meta name="robots" content="index, follow" />
@@ -19,13 +19,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zipkit.myrialabs.dev" />
   <meta property="og:title" content="ZipKit | Overkill compression for Node, Bun &amp; the browser" />
-  <meta property="og:description" content="One typed API over nine compression codecs — gzip, deflate, zlib, zstd, lz4, snappy, brotli, lzma, bzip2 — plus ZIP, on a single WebAssembly engine. Native speed where it wins, libdeflate density where it matters." />
+  <meta property="og:description" content="One typed API over ten compression codecs — gzip, deflate, zlib, zstd, lz4, snappy, brotli, lzma, bzip2, xz — plus ZIP (streaming &amp; AES), tar and 7z, on a single WebAssembly engine. Native speed where it wins, libdeflate density where it matters." />
   <meta property="og:site_name" content="ZipKit" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZipKit | Overkill compression for Node, Bun &amp; the browser" />
-  <meta name="twitter:description" content="Nine codecs + ZIP in one tiny typed API over a single Wasm engine. Native speed where it wins, libdeflate density where it matters. Node 18+, Bun, and the browser." />
+  <meta name="twitter:description" content="Ten codecs + ZIP (streaming &amp; AES), tar and 7z in one tiny typed API over a single Wasm engine. Native speed where it wins, libdeflate density where it matters. Node 18+, Bun, and the browser." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -519,8 +519,8 @@
         Compress anything.<br/><span class="grad-text">Everywhere.</span>
       </h1>
       <p class="hero-desc fade-in-3">
-        One typed API over nine codecs — gzip, deflate, zlib, zstd, lz4, snappy, brotli, lzma, bzip2 —
-        plus a ZIP container, all from a single WebAssembly engine.
+        One typed API over ten codecs — gzip, deflate, zlib, zstd, lz4, snappy, brotli, lzma, bzip2, xz —
+        plus ZIP (streaming &amp; AES), tar and 7z containers, all from a single WebAssembly engine.
         Native speed where it wins, libdeflate density where it matters. Node 18+, Bun, and the browser.
       </p>
       <div class="hero-cta fade-in-4">
@@ -570,7 +570,7 @@
           <div class="feature-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <div class="feature-title">Nine Codecs, One API</div>
+          <div class="feature-title">Ten Codecs, One API</div>
           <div class="feature-desc">Named imports when you know what you want — <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">gzip</code>, <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zstd</code>, <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">brotli</code> — or <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">compress()</code> / <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">decompress()</code> for generic dispatch with auto-detect.</div>
         </div>
 
@@ -602,8 +602,8 @@
           <div class="feature-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
           </div>
-          <div class="feature-title">ZIP Container</div>
-          <div class="feature-desc">Read and write standard ZIPs — <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">store</code>, <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">deflate</code>, or denser <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zstd</code> (method 93). ZIP64 past 4 GB / 65,535 entries, filtered extraction, per-entry metadata.</div>
+          <div class="feature-title">ZIP, tar &amp; 7z</div>
+          <div class="feature-desc">Read and write ZIP (<code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">store</code>/<code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">deflate</code>/<code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zstd</code>) with ZIP64, streaming, and WinZip <strong>AES-256</strong> — plus <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">tar</code>/<code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">.tar.gz</code>/<code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">.tar.zst</code> and <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">.7z</code>, all interoperable with the standard tools.</div>
         </div>
 
         <div class="feature-card">
@@ -624,14 +624,6 @@
 
         <div class="feature-card">
           <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
-          <div class="feature-title">Worker Pool</div>
-          <div class="feature-desc">Push compression off the main thread with <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zipkit/workers</code> — one worker per core, an <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">AbortSignal</code> you can honor, and an inline fallback where threads aren't available.</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
           </div>
           <div class="feature-title">HTTP Middleware</div>
@@ -644,6 +636,14 @@
           </div>
           <div class="feature-title">Lossless Image &amp; Video</div>
           <div class="feature-desc">Domains portable libraries skip: <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">encodeImage</code> (QOI) beats brotli on raw pixels, and <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">encodeFrames</code> (frame-delta + zstd) halves plain zstd on temporal frames.</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/><polyline points="17 11 21 15 17 19"/></svg>
+          </div>
+          <div class="feature-title">Dictionary &amp; Delta</div>
+          <div class="feature-desc">Beat generic codecs where they're weak: a trained <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zstd</code> dictionary shrinks many small, similar payloads, and <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">compressDelta</code> encodes only what changed between revisions — logs, chat, snapshots.</div>
         </div>
 
         <div class="feature-card">
@@ -671,7 +671,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag">See It In Action</div>
-        <h2 class="section-title">Nine codecs,<br/><span class="grad-text">one set of patterns</span></h2>
+        <h2 class="section-title">Ten codecs,<br/><span class="grad-text">one set of patterns</span></h2>
       </div>
 
       <div class="showcase-content" style="margin-bottom: 80px;">
@@ -681,7 +681,7 @@
           <ul class="showcase-list">
             <li><span class="check">✓</span><span> Every codec is a <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">compress</code> / <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">decompress</code> pair</span></li>
             <li><span class="check">✓</span><span> Async helpers lazy-load the engine on first use</span></li>
-            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">decompress()</code> auto-detects gzip, zlib, and zstd</span></li>
+            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">decompress()</code> auto-detects gzip, zlib, zstd, and xz</span></li>
             <li><span class="check">✓</span><span> Bytes in, bytes out — strings convert via <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">strToU8</code> / <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">strFromU8</code></span></li>
           </ul>
         </div>
@@ -742,13 +742,13 @@
 
       <div class="showcase-content" style="margin-bottom: 80px;">
         <div class="showcase-text">
-          <h3>ZIP archives, optionally with zstd</h3>
-          <p>Build and read standard ZIPs in memory. Mix methods per entry, attach metadata, and filter on the way out — or opt into <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zstd</code> for much denser archives between ZipKit-aware peers.</p>
+          <h3>ZIP archives — zstd, AES &amp; streaming</h3>
+          <p>Build and read standard ZIPs, opt into <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zstd</code> for denser archives, encrypt with one option, or stream multi-GB archives without buffering. Plus <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">tar</code> and <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">7z</code> containers.</p>
           <ul class="showcase-list">
-            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">store</code> / <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">deflate</code> interoperate with every ZIP tool</span></li>
-            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">filter</code> runs on metadata, before any decompression</span></li>
-            <li><span class="check">✓</span><span> ZIP64 kicks in automatically past 4 GB / 65,535 entries</span></li>
-            <li><span class="check">✓</span><span> Per-entry <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">mtime</code>, <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">unixPermissions</code>, and comments</span></li>
+            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">password</code> — WinZip AES-256, opens in 7-Zip / WinZip</span></li>
+            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">zipStream()</code> writes incrementally, memory-bounded</span></li>
+            <li><span class="check">✓</span><span> ZIP64 past 4 GB / 65,535 entries; <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">verify</code> checks CRC-32</span></li>
+            <li><span class="check">✓</span><span> <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">tar</code> / <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">.tar.gz</code> / <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">.tar.zst</code> and <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:12px;">.7z</code> (7-Zip-compatible)</span></li>
           </ul>
         </div>
         <div class="showcase-img-wrap">
@@ -761,16 +761,17 @@
           <div class="mockup-body">
 <pre><span class="tk-keyword">import</span> { <span class="tk-fn">zip</span><span class="tk-punct">,</span> <span class="tk-fn">unzip</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit'</span><span class="tk-punct">;</span>
 
+<span class="tk-comment">// Encrypted (AES-256) — opens in 7-Zip / WinZip</span>
 <span class="tk-keyword">const</span> <span class="tk-var">archive</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">zip</span><span class="tk-punct">([</span>
   <span class="tk-punct">{</span> <span class="tk-prop">name</span><span class="tk-punct">:</span> <span class="tk-string">'index.html'</span><span class="tk-punct">,</span> <span class="tk-prop">data</span><span class="tk-punct">:</span> <span class="tk-var">html</span> <span class="tk-punct">},</span>
   <span class="tk-punct">{</span> <span class="tk-prop">name</span><span class="tk-punct">:</span> <span class="tk-string">'app.js'</span><span class="tk-punct">,</span> <span class="tk-prop">data</span><span class="tk-punct">:</span> <span class="tk-var">js</span><span class="tk-punct">,</span> <span class="tk-prop">method</span><span class="tk-punct">:</span> <span class="tk-string">'zstd'</span> <span class="tk-punct">},</span>
-  <span class="tk-punct">{</span> <span class="tk-prop">name</span><span class="tk-punct">:</span> <span class="tk-string">'logo.png'</span><span class="tk-punct">,</span> <span class="tk-prop">data</span><span class="tk-punct">:</span> <span class="tk-var">png</span><span class="tk-punct">,</span> <span class="tk-prop">method</span><span class="tk-punct">:</span> <span class="tk-string">'store'</span> <span class="tk-punct">},</span>
-<span class="tk-punct">]);</span>
+<span class="tk-punct">],</span> <span class="tk-punct">{</span> <span class="tk-prop">password</span><span class="tk-punct">:</span> <span class="tk-string">'secret'</span> <span class="tk-punct">});</span>
 
-<span class="tk-comment">// Extract only what you need</span>
-<span class="tk-keyword">const</span> <span class="tk-var">files</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">unzip</span><span class="tk-punct">(</span><span class="tk-var">archive</span><span class="tk-punct">,</span> <span class="tk-punct">{</span>
-  <span class="tk-prop">filter</span><span class="tk-punct">:</span> <span class="tk-punct">(</span><span class="tk-var">e</span><span class="tk-punct">)</span> <span class="tk-punct">=&gt;</span> <span class="tk-var">e</span>.<span class="tk-prop">name</span>.<span class="tk-fn">endsWith</span><span class="tk-punct">(</span><span class="tk-string">'.js'</span><span class="tk-punct">),</span>
-<span class="tk-punct">});</span></pre>
+<span class="tk-keyword">const</span> <span class="tk-var">files</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">unzip</span><span class="tk-punct">(</span><span class="tk-var">archive</span><span class="tk-punct">,</span> <span class="tk-punct">{</span> <span class="tk-prop">password</span><span class="tk-punct">:</span> <span class="tk-string">'secret'</span> <span class="tk-punct">});</span>
+
+<span class="tk-comment">// Or stream a huge archive straight to disk</span>
+<span class="tk-keyword">import</span> { <span class="tk-fn">zipStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit/zip'</span><span class="tk-punct">;</span>
+<span class="tk-keyword">await</span> <span class="tk-fn">zipStream</span><span class="tk-punct">(</span><span class="tk-var">entries</span><span class="tk-punct">).</span><span class="tk-fn">pipeTo</span><span class="tk-punct">(</span><span class="tk-var">dest</span><span class="tk-punct">);</span></pre>
           </div>
         </div>
       </div>
@@ -918,7 +919,7 @@
     <div class="container">
       <div class="cta-card">
         <h2>Ready to compress<br/>everything?</h2>
-        <p>Nine codecs, a ZIP container, streams, workers, and middleware — in one tiny typed API that runs the same on Node, Bun, and the browser.</p>
+        <p>Ten codecs; ZIP (streaming &amp; AES), tar and 7z containers; dictionary &amp; delta; streams, workers, and middleware — in one tiny typed API that runs the same on Node, Bun, and the browser.</p>
         <div class="cta-btns">
           <a href="#install" class="btn-primary">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
