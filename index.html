@@ -543,7 +543,7 @@
             <div class="win-title">quick-start.ts</div>
           </div>
           <div class="mockup-body hero-code">
-<pre><span class="tk-keyword">import</span> { <span class="tk-fn">gzip</span><span class="tk-punct">,</span> <span class="tk-fn">zstd</span><span class="tk-punct">,</span> <span class="tk-fn">compress</span><span class="tk-punct">,</span> <span class="tk-fn">decompress</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit'</span><span class="tk-punct">;</span>
+<pre><span class="tk-keyword">import</span> { <span class="tk-fn">gzip</span><span class="tk-punct">,</span> <span class="tk-fn">zstd</span><span class="tk-punct">,</span> <span class="tk-fn">compress</span><span class="tk-punct">,</span> <span class="tk-fn">decompress</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit'</span><span class="tk-punct">;</span>
 
 <span class="tk-keyword">const</span> <span class="tk-var">gz</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">gzip</span><span class="tk-punct">(</span><span class="tk-var">bytes</span><span class="tk-punct">);</span>                  <span class="tk-comment">// balanced default</span>
 <span class="tk-keyword">const</span> <span class="tk-var">small</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">zstd</span><span class="tk-punct">(</span><span class="tk-var">bytes</span><span class="tk-punct">,</span> <span class="tk-punct">{</span> <span class="tk-prop">mode</span><span class="tk-punct">:</span> <span class="tk-string">'ratio'</span> <span class="tk-punct">});</span>
@@ -693,7 +693,7 @@
             <div class="win-title">codecs.ts</div>
           </div>
           <div class="mockup-body">
-<pre><span class="tk-keyword">import</span> { <span class="tk-fn">brotli</span><span class="tk-punct">,</span> <span class="tk-fn">unbrotli</span><span class="tk-punct">,</span> <span class="tk-fn">compress</span><span class="tk-punct">,</span> <span class="tk-fn">decompress</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit'</span><span class="tk-punct">;</span>
+<pre><span class="tk-keyword">import</span> { <span class="tk-fn">brotli</span><span class="tk-punct">,</span> <span class="tk-fn">unbrotli</span><span class="tk-punct">,</span> <span class="tk-fn">compress</span><span class="tk-punct">,</span> <span class="tk-fn">decompress</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit'</span><span class="tk-punct">;</span>
 
 <span class="tk-comment">// Named — tree-shakeable, async, lazy engine</span>
 <span class="tk-keyword">const</span> <span class="tk-var">c</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">brotli</span><span class="tk-punct">(</span><span class="tk-var">bytes</span><span class="tk-punct">,</span> <span class="tk-punct">{</span> <span class="tk-prop">mode</span><span class="tk-punct">:</span> <span class="tk-string">'ratio'</span> <span class="tk-punct">});</span>
@@ -759,7 +759,7 @@
             <div class="win-title">archive.ts</div>
           </div>
           <div class="mockup-body">
-<pre><span class="tk-keyword">import</span> { <span class="tk-fn">zip</span><span class="tk-punct">,</span> <span class="tk-fn">unzip</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit'</span><span class="tk-punct">;</span>
+<pre><span class="tk-keyword">import</span> { <span class="tk-fn">zip</span><span class="tk-punct">,</span> <span class="tk-fn">unzip</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit'</span><span class="tk-punct">;</span>
 
 <span class="tk-comment">// Encrypted (AES-256) — opens in 7-Zip / WinZip</span>
 <span class="tk-keyword">const</span> <span class="tk-var">archive</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">zip</span><span class="tk-punct">([</span>
@@ -770,7 +770,7 @@
 <span class="tk-keyword">const</span> <span class="tk-var">files</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">unzip</span><span class="tk-punct">(</span><span class="tk-var">archive</span><span class="tk-punct">,</span> <span class="tk-punct">{</span> <span class="tk-prop">password</span><span class="tk-punct">:</span> <span class="tk-string">'secret'</span> <span class="tk-punct">});</span>
 
 <span class="tk-comment">// Or stream a huge archive straight to disk</span>
-<span class="tk-keyword">import</span> { <span class="tk-fn">zipStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit/zip'</span><span class="tk-punct">;</span>
+<span class="tk-keyword">import</span> { <span class="tk-fn">zipStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit/zip'</span><span class="tk-punct">;</span>
 <span class="tk-keyword">await</span> <span class="tk-fn">zipStream</span><span class="tk-punct">(</span><span class="tk-var">entries</span><span class="tk-punct">).</span><span class="tk-fn">pipeTo</span><span class="tk-punct">(</span><span class="tk-var">dest</span><span class="tk-punct">);</span></pre>
           </div>
         </div>
@@ -795,7 +795,7 @@
             <div class="win-title">stream.ts</div>
           </div>
           <div class="mockup-body">
-<pre><span class="tk-keyword">import</span> { <span class="tk-fn">compressionStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'zipkit/streams'</span><span class="tk-punct">;</span>
+<pre><span class="tk-keyword">import</span> { <span class="tk-fn">compressionStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit/streams'</span><span class="tk-punct">;</span>
 
 <span class="tk-keyword">const</span> <span class="tk-var">res</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">fetch</span><span class="tk-punct">(</span><span class="tk-string">'/big.json'</span><span class="tk-punct">);</span>
 
@@ -863,8 +863,8 @@
             <div class="install-step-label">Add zipkit to your project</div>
             <div class="code-line">
               <span class="code-prompt">$</span>
-              <span class="code-text">npm install zipkit</span>
-              <button class="code-copy" onclick="copyCode(this, 'npm install zipkit')">copy</button>
+              <span class="code-text">npm install @myrialabs/zipkit</span>
+              <button class="code-copy" onclick="copyCode(this, 'npm install @myrialabs/zipkit')">copy</button>
             </div>
           </div>
         </div>
@@ -881,7 +881,7 @@
         </div>
       </div>
       <p style="text-align:center;margin-top:28px;font-size:14px;color:var(--text-2);">
-        Prefer the terminal? <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:13px;">npm install -g zipkit</code> · then <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:13px;">zipkit compress data.json --mode ratio</code>
+        Prefer the terminal? <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:13px;">npm install -g @myrialabs/zipkit</code> · then <code style="color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:13px;">zipkit compress data.json --mode ratio</code>
       </p>
     </div>
   </section>
@@ -948,7 +948,7 @@
         </div>
         <div class="footer-links-row">
           <a href="https://github.com/myrialabs/zipkit">GitHub</a>
-          <a href="https://www.npmjs.com/package/zipkit">npm</a>
+          <a href="https://www.npmjs.com/package/@myrialabs/zipkit">npm</a>
           <a href="https://github.com/myrialabs/zipkit/issues">Issues</a>
           <a href="https://github.com/myrialabs/zipkit/blob/main/LICENSE">License</a>
         </div>
