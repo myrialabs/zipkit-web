@@ -770,7 +770,7 @@
 <span class="tk-keyword">const</span> <span class="tk-var">files</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">unzip</span><span class="tk-punct">(</span><span class="tk-var">archive</span><span class="tk-punct">,</span> <span class="tk-punct">{</span> <span class="tk-prop">password</span><span class="tk-punct">:</span> <span class="tk-string">'secret'</span> <span class="tk-punct">});</span>
 
 <span class="tk-comment">// Or stream a huge archive straight to disk</span>
-<span class="tk-keyword">import</span> { <span class="tk-fn">zipStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit/zip'</span><span class="tk-punct">;</span>
+<span class="tk-keyword">import</span> { <span class="tk-fn">zipStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit'</span><span class="tk-punct">;</span>
 <span class="tk-keyword">await</span> <span class="tk-fn">zipStream</span><span class="tk-punct">(</span><span class="tk-var">entries</span><span class="tk-punct">).</span><span class="tk-fn">pipeTo</span><span class="tk-punct">(</span><span class="tk-var">dest</span><span class="tk-punct">);</span></pre>
           </div>
         </div>
@@ -795,7 +795,7 @@
             <div class="win-title">stream.ts</div>
           </div>
           <div class="mockup-body">
-<pre><span class="tk-keyword">import</span> { <span class="tk-fn">compressionStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit/streams'</span><span class="tk-punct">;</span>
+<pre><span class="tk-keyword">import</span> { <span class="tk-fn">compressionStream</span> } <span class="tk-keyword">from</span> <span class="tk-string">'@myrialabs/zipkit'</span><span class="tk-punct">;</span>
 
 <span class="tk-keyword">const</span> <span class="tk-var">res</span> <span class="tk-punct">=</span> <span class="tk-keyword">await</span> <span class="tk-fn">fetch</span><span class="tk-punct">(</span><span class="tk-string">'/big.json'</span><span class="tk-punct">);</span>
 
